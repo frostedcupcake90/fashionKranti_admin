@@ -1,0 +1,92 @@
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-8"></span>
+  <!-- Header container -->
+ 
+</div>
+<div class="container-fluid mt--7">
+    
+<div class="row">
+  <div class="col">
+    <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0"></h3>
+            </div>
+            <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+         
+
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+                
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">User Name</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                 <!-- User table -->
+           
+            <tr *ngFor="let user of userList" >
+                <th scope="row">
+                    <i class="fas fa-search"></i>
+                </th>
+                <th scope="row">
+                    {{user.name}}
+                </th>
+                <td>
+                  {{user.userName}}
+                </td>
+                <td>
+                    {{user.email}}
+                </td>
+                <td>
+                    {{user.role}}
+                </td>
+                <td>
+                    <div class="col text-right">
+                        <a href="#!" class="btn btn-sm btn-primary">Edit Right</a>
+                      </div>
+                    
+                </td>
+                <td>
+                    <div class="col text-right">
+                      <!-- <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/register']">
+                        <i class="ni ni-circle-08"></i>
+                        <span class="nav-link-inner--text">Register</span>
+                      </a> -->
+
+                        <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/view-user-details']">View Details</a>
+                      </div>
+                    
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+       
+      </div>
+    </div>
+  
+  </div>
+  <div style="text-align: center; margin: 10px;">
+    
+        <a href="#!" class="btn btn-sm btn-primary btn">Pay Salary</a>
+      
+        <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/add-user']">Add User</a>
+  </div>
+  
+</div>
