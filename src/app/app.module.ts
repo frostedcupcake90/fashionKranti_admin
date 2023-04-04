@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -20,6 +20,7 @@ import { AddProductComponent } from './pages/product/add-product/add-product.com
 import { AddCategoryComponent } from './pages/product/add-category/add-category.component';
 import { AddBrandComponent } from './pages/product/add-brand/add-brand.component';
 import { CategoryListComponent } from './pages/product/category-list/category-list.component';
+import { RestApiService } from './service/rest-api.service';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { CategoryListComponent } from './pages/product/category-list/category-li
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
@@ -43,9 +44,10 @@ import { CategoryListComponent } from './pages/product/category-list/category-li
     AddProductComponent,
     AddCategoryComponent,
     AddBrandComponent,
-    CategoryListComponent
+    CategoryListComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
