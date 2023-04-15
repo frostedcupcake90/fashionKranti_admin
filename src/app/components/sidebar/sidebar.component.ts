@@ -8,21 +8,12 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    // { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
-    // { path: '/icons', title: 'Icons',  icon:'ni-planet text-blue', class: '' },
-    // { path: '/maps', title: 'Maps',  icon:'ni-pin-3 text-orange', class: '' },
-    // { path: '/user', title: 'All User',  icon:'ni-single-02 text-yellow', class: '' },
-    // { path: '/user-profile', title: 'User profile',  icon:'ni-single-02 text-yellow', class: '' },
-    // { path: '/tables', title: 'Tables',  icon:'ni-bullet-list-67 text-red', class: '' },
-    // { path: '/login', title: 'Login',  icon:'ni-key-25 text-info', class: '' },
-    // { path: '/register', title: 'Register',  icon:'ni-circle-08 text-pink', class: '' }
-
     { title: 'DASHBOARD', path: '/folder/DASHBOARD', icon: 'assets/svgs/icon-1.svg', class: '' },
     { title: 'POS (POINT OF SALE)', path: '/folder/POS (POINT OF SALE)', icon: 'assets/svgs/icon-2.svg', class: '' },
-    { title: 'USERS', path: '/users-list', icon: 'assets/svgs/icon-3.svg', class: '' },
+    { title: 'USERS', path: '/user', icon: 'assets/svgs/icon-3.svg', class: '' },
     { title: 'CODE ENGINE (DISCOUNT)', path: '/folder/CODE ENGINE (DISCOUNT)', icon: 'assets/svgs/icon-5.svg', class: '' },
     { title: 'SUB STORES', path: '/folder/SUB STORES', icon: 'assets/svgs/icon-6.svg', class: '' },
-    { title: 'PURCHASE MODULE', path: '/add-category', icon: 'assets/svgs/icon-7.svg', class: '' },
+    { title: 'PURCHASE MODULE', path: '/add-brand', icon: 'assets/svgs/icon-7.svg', class: '' },
     { title: 'GENERATE BAR2', path: '/folder/GENERATE BAR2', icon: 'assets/svgs/icon-8.svg', class: '' },
     { title: 'SALES MODULE', path: '/folder/SALES MODULE', icon: 'assets/svgs/icon-9.svg', class: '' },
     { title: 'ACCOUNTS', path: '/folder/ACCOUNTS', icon: 'assets/svgs/icon-10.svg', class: '' },
