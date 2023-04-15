@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -18,6 +18,13 @@ import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-us
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { ProductComponent } from './pages/product/product.component';
+import { AddProductComponent } from './pages/product/add-product/add-product.component';
+import { AddCategoryComponent } from './pages/product/add-category/add-category.component';
+import { AddBrandComponent } from './pages/product/add-brand/add-brand.component';
+import { CategoryListComponent } from './pages/product/category-list/category-list.component';
+import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
+import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
 
 
 @NgModule({
@@ -37,10 +44,18 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     AuthLayoutComponent,
     UserComponent,
     AddUserComponent,
-    ViewUserDetailsComponent
+    ViewUserDetailsComponent,
+    ProductComponent,
+    AddProductComponent,
+    AddCategoryComponent,
+    AddBrandComponent,
+    CategoryListComponent,
+    AddCategoryTwoComponent,
+    AddCategoryThreeComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { 
   constructor(library: FaIconLibrary) {
