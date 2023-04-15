@@ -39,11 +39,10 @@
                   
                 <tr>
                   <th scope="col"></th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Role</th>
-                  <th scope="col"></th>
+                  <th scope="col">Brand</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Gross Price</th>
+                  <th scope="col">Net Price</th>
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -66,19 +65,9 @@
                   <td>
                       {{user.role}}
                   </td>
+                  
                   <td>
-                      <div class="col text-right">
-                          <a href="#!" class="btn btn-sm btn-primary">Edit Right</a>
-                        </div>
-                      
-                  </td>
-                  <td>
-                      <div class="col text-right">
-                        <!-- <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/register']">
-                          <i class="ni ni-circle-08"></i>
-                          <span class="nav-link-inner--text">Register</span>
-                        </a> -->
-  
+                    <div class="col text-right">
                           <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/view-user-details']">View Details</a>
                         </div>
                       
@@ -93,12 +82,12 @@
       </div>
     
     </div>
-    <div style="text-align: center; margin: 20px;">
-      
-          <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;">Pay Salary</a>
-        
-          <a href="#!" class="btn btn-sm btn-primary" style="margin-left: 10px;" routerLinkActive="active" [routerLink]="['/add-user']">Add User</a>
-    </div>
+    <div style="text-align: center; margin: 20px;">   
+          <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;" [routerLink]="['/add-product']">Add New Product</a>
+        <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;" [routerLink]="['/add-category']">Add Category</a>
+    <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;" [routerLink]="['/add-category-two']">Add Category two</a>
+    <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;" [routerLink]="['/add-category-three']">Add Category three</a>
+
     
   </div>
   

@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   public userList = [
-    { name: 'Dr. Nice', userName: 'nice' ,email:'nice@gmail.com' ,role:'Admin'},
-    { name: 'Bombasto', userName: 'bombasto' ,email:'bombasto@gmail.com' ,role:'Admin'},
-    { name: 'Celeritas', userName: 'celeritas' ,email:'celeritas@gmail.com' ,role:'Admin'},
-    { name: 'Magneta', userName: 'nice' ,email:'mageta@gmail.com' ,role:'Admin'},
-    { name: 'RubberMan', userName: 'nice' ,email:'rubberman@gmail.com' ,role:'Admin'},
-    { name: 'Dynama', userName: 'nice' ,email:'dynama@gmail.com' ,role:'Admin'},
-    { name: 'Dr. IQ', userName: 'iq' ,email:'iq@gmail.com' ,role:'Admin'},
-    { name: 'Dr. Tornado', userName: 'tornado' ,email:'tornado@gmail.com' ,role:'Admin'},
+    { name: 'US POLO', userName: 'Shirts/Casual' ,email:'1299.00' ,role:'899.00'},
+    { name: 'H & M', userName: 'Pant/Formal' ,email:'899.00' ,role:'599.00'},
+    { name: 'US POLO', userName: 'Shirts/Casual' ,email:'1299.00' ,role:'899.00'},
+    { name: 'H & M', userName: 'Pant/Formal' ,email:'899.00' ,role:'599.00'},
+    { name: 'US POLO', userName: 'Shirts/Casual' ,email:'1299.00' ,role:'899.00'},
+    { name: 'H & M', userName: 'Pant/Formal' ,email:'899.00' ,role:'599.00'},
+    { name: 'US POLO', userName: 'Shirts/Casual' ,email:'1299.00' ,role:'899.00'},
+    { name: 'H & M', userName: 'Pant/Formal' ,email:'899.00' ,role:'599.00'},
  
   ];
   constructor() { }
