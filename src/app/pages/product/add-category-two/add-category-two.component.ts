@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-add-category',
-  templateUrl: './add-category.component.html',
-  styleUrls: ['./add-category.component.scss']
+  selector: 'app-add-category-two',
+  templateUrl: './add-category-two.component.html',
+  styleUrls: ['./add-category-two.component.scss']
 })
-export class AddCategoryComponent implements OnInit {
-  heading = 'PRODUCT CATEGORY 1'
+export class AddCategoryTwoComponent implements OnInit {
+
+  heading = 'PRODUCT CATEGORY 2'
   description = '';
   categoryName = '';
   imageData;
+  public categoryOne = ["Shirts", "T-Shirts", "Pants"];
+  public selectedCategoryOne: string = "Shirts";
   constructor() { }
 
   ngOnInit(): void {
@@ -26,8 +29,10 @@ export class AddCategoryComponent implements OnInit {
    }
 
    addOrUpdate(){
-
    }
 
+   selectCategory(selectedCategory) {
+      this.selectedCategoryOne = selectedCategory;
+  }
 
 }

@@ -20,7 +20,8 @@ import { AddProductComponent } from './pages/product/add-product/add-product.com
 import { AddCategoryComponent } from './pages/product/add-category/add-category.component';
 import { AddBrandComponent } from './pages/product/add-brand/add-brand.component';
 import { CategoryListComponent } from './pages/product/category-list/category-list.component';
-import { RestApiService } from './service/rest-api.service';
+import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
+import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
 
 
 @NgModule({
@@ -45,6 +46,8 @@ import { RestApiService } from './service/rest-api.service';
     AddCategoryComponent,
     AddBrandComponent,
     CategoryListComponent,
+    AddCategoryTwoComponent,
+    AddCategoryThreeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

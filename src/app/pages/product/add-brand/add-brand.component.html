@@ -1,1 +1,59 @@
-<p>add-brand works!</p>
+
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask bg-gradient-danger opacity-8"></span>
+    <!-- Header container -->
+   
+  </div>
+  <div class="container-fluid mt--7">
+    <div class="container mt--8 pb-5">
+      <div class="row justify-content-center">
+        <div>
+          <div class="card bg-secondary shadow border-0">
+     
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>{{heading}}</small>
+              </div>
+              <form role="form">
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    
+                    <input class="form-control" placeholder="Brand Name" type="text" [(ngModel)]="brandName">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <textarea class="form-control" placeholder="Description" type="text" [(ngModel)]="description"></textarea>
+                  </div>
+                </div>
+                <div class="form-group text-center">
+                    <img src="assets/img/images/upload-background.jpg" *ngIf="!imageData" class="uploadBack">
+                    <img src="{{imageData}}" *ngIf="imageData" class="uploadBack">
+  
+                    <!-- <img src="assets/img/images/upload-simple.svg" class="uploadBtn"> -->
+                   
+                </div>
+                <div class="form-group text-center uploadBtn ">
+                  <input class="ng-hide" id="input-file-id" image type="file" [(ngModel)]="imageData"  (change)="onFileSelected($event)" accept="image/*">
+                </div>
+                
+                <div style="text-align: center; margin: 10px;">
+      
+                  <a href="#!" class="btn btn-sm btn-primary btn">CANCEL</a>
+                
+                  <a href="#!" class="btn btn-sm btn-primary" (click)="addOrUpdate()">ADD/UPDATE</a>
+            </div>
+  
+            
+              </form>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+   
+    
+  </div>
+  
