@@ -15,6 +15,9 @@ import { ComponentsModule } from './components/components.module';
 import { UserComponent } from './pages/user/user.component';
 import { AddUserComponent } from './pages/user/add-user/add-user.component';
 import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-user-details.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-us
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   declarations: [
     AppComponent,
@@ -38,4 +42,8 @@ import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-us
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far)
+  }
+}
