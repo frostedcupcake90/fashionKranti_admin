@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { UserComponent } from './pages/user/user.component';
+import { VendorComponent } from './pages/vendor/vendor.component';
+
 import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-user-details.component';
 import { AddUserComponent } from './pages/user/add-user/add-user.component';
 import { ProductComponent } from './pages/product/product.component';
@@ -15,6 +17,7 @@ import { AddProductComponent } from './pages/product/add-product/add-product.com
 import { CategoryListComponent } from './pages/product/category-list/category-list.component';
 import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
 import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
+import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
 
 const routes: Routes =[
   // {
@@ -44,6 +47,14 @@ const routes: Routes =[
   {
     path: 'user',
     component: UserComponent
+  },
+  {
+    path: 'vendor',
+    component: VendorComponent
+  },
+  {
+    path: 'add-vendor',
+    component: AddVendorComponent
   },
   {
     path: 'add-user',

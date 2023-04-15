@@ -25,6 +25,9 @@ import { AddBrandComponent } from './pages/product/add-brand/add-brand.component
 import { CategoryListComponent } from './pages/product/category-list/category-list.component';
 import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
 import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
+import { VendorComponent } from './pages/vendor/vendor.component';
+import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
+import { ViewVendorDetailComponent } from './pages/vendor/view-vendor-detail/view-vendor-detail.component';
 
 
 @NgModule({
@@ -52,6 +55,9 @@ import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-ca
     CategoryListComponent,
     AddCategoryTwoComponent,
     AddCategoryThreeComponent,
+    VendorComponent,
+    AddVendorComponent,
+    ViewVendorDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
