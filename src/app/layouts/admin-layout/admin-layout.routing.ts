@@ -14,21 +14,25 @@ import { AddProductComponent } from 'src/app/pages/product/add-product/add-produ
 import { AddCategoryComponent } from 'src/app/pages/product/add-category/add-category.component';
 import { AddCategoryTwoComponent } from 'src/app/pages/product/add-category-two/add-category-two.component';
 import { AddCategoryThreeComponent } from 'src/app/pages/product/add-category-three/add-category-three.component';
+import { VendorComponent } from 'src/app/pages/vendor/vendor.component';
+import { AddVendorComponent } from 'src/app/pages/vendor/add-vendor/add-vendor.component';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'user',   component: UserComponent },
-    { path: 'product',   component: ProductComponent },
-    { path: 'add-user',   component: AddUserComponent },
-    { path: 'view-user-details',   component: ViewUserDetailsComponent },
-    { path: 'tables',         component: TablesComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'add-brand',           component: AddBrandComponent },
-    { path: 'add-product',           component: AddProductComponent },
-    { path: 'add-category',           component: AddCategoryComponent },
-    { path: 'add-category-two',           component: AddCategoryTwoComponent },
-    { path: 'add-category-three',           component: AddCategoryThreeComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'user', component: UserComponent },
+    { path: 'product', component: ProductComponent },
+    { path: 'add-user', component: AddUserComponent },
+    { path: 'view-user-details', component: ViewUserDetailsComponent },
+    { path: 'tables', component: TablesComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'maps', component: MapsComponent },
+    { path: 'add-brand', component: AddBrandComponent },
+    { path: 'add-product', component: AddProductComponent },
+    { path: 'add-category', component: AddCategoryComponent },
+    { path: 'add-category-two', component: AddCategoryTwoComponent },
+    { path: 'add-category-three', component: AddCategoryThreeComponent },
+    { path: 'add-vendor', component: AddVendorComponent },
+    { path: 'vendor', component: VendorComponent },
 
 ];

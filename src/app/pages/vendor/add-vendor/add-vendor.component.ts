@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-vendor.component.scss']
 })
 export class AddVendorComponent implements OnInit {
-
+  heading = "ADD VENDOR"
   constructor() { }
 
   ngOnInit(): void {
