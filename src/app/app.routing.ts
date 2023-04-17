@@ -18,6 +18,7 @@ import { CategoryListComponent } from './pages/product/category-list/category-li
 import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
 import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
 import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes =[
   // {
@@ -97,6 +98,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes,{
       useHash: true
     })

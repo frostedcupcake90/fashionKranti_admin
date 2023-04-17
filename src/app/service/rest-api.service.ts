@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 import {  throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 
 export class RestApiService {
   
@@ -22,6 +24,29 @@ export class RestApiService {
       );
   }
 
+
+  fetchUserList() {
+    return this.http.post(this.apiURL + '/dev/fetchuserlist.php',{}).pipe(
+        catchError(this.handleError) // then handle the error
+      );
+  }
+
+  fetchUserDetails() {
+    let obj = {
+      'user_email' : 'saurabh1@gmail.com'
+    }
+    return this.http.post(this.apiURL + '/dev/fetchuserdetail.php', obj).pipe(
+        catchError(this.handleError) // then handle the error
+      );
+  }
+
+  
+
+  addUser(obj: any) {
+    return this.http.post(this.apiURL + '/dev/adduser.php', obj).pipe(
+        catchError(this.handleError) // then handle the error
+      );
+  }
  
   // Error handling
   handleError(error: any) {

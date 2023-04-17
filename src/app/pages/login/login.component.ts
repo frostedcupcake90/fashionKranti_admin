@@ -29,5 +29,8 @@ password:String = '';
             this.router.navigate(['/add-category']);
      }
     });
+
+
+
   }
 }
