@@ -5,89 +5,159 @@
    
   </div>
   <div class="container-fluid mt--7">
-      
-  <div class="row">
-    <div class="col">
-      <div class="card shadow">
-          <div class="card-header border-0">
-            <div class="row align-items-center">
-              <div class="col">
-                <h3 class="mb-0"></h3>
-              </div>
-              <div class="col text-right">
-                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+    <div class="row">
+      <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+        <div class="card card-profile shadow">
+          <div class="row justify-content-center">
+            <div class="col-lg-3 order-lg-2">
+              <div class="card-profile-image">
+                <a href="javascript:void(0)">
+                  <img src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
+                </a>
               </div>
             </div>
           </div>
-  
-          <div class="table-responsive">
-           
-  
-            <table class="table align-items-center table-flush">
-              <thead class="thead-light">
-                  
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Role</th>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                   <!-- User table -->
+          
+          <div class="card-body pt-0 pt-md-4">
+            <div class="text-center">
+              <h3>
+                Sheldon Cooper<span class="font-weight-light">, 27</span>
+              </h3>
+              <div class="h5 font-weight-300">
+                <i class="ni location_pin mr-2"></i>Texes, US
+              </div>
+              <div class="h5 mt-4">
+                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+              </div>
+              <div>
+                <i class="ni education_hat mr-2"></i>University of Computer Science
+              </div>
              
-              <tr *ngFor="let user of userList" >
-                  <th scope="row">
-                      <i class="fas fa-search"></i>
-                  </th>
-                  <th scope="row">
-                      {{user.name}}
-                  </th>
-                  <td>
-                    {{user.userName}}
-                  </td>
-                  <td>
-                      {{user.email}}
-                  </td>
-                  <td>
-                      {{user.role}}
-                  </td>
-                  <td>
-                      <div class="col text-right">
-                          <a href="#!" class="btn btn-sm btn-primary">Edit Right</a>
-                        </div>
-                      
-                  </td>
-                  <td>
-                      <div class="col text-right">
-                        <!-- <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/register']">
-                          <i class="ni ni-circle-08"></i>
-                          <span class="nav-link-inner--text">Register</span>
-                        </a> -->
-  
-                          <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/view-user-details']">View Details</a>
-                        </div>
-                      
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            </div>
           </div>
-  
-         
+
+
+          <div class="card-body pt-0">
+            <div class="text-center">
+              <h4>
+                General information
+              </h4>
+            </div>
+
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Salary</h6>
+                </div>
+                <span class="text-muted">12000</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Joining date</h6>
+                </div>
+                <span class="text-muted">12/07/2022</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Phone number</h6>
+                </div>
+                <span class="text-muted">1234567890</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Email Address</h6>
+                </div>
+                <span class="text-muted">Sheldon.cooper@gmail.com</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Address</h6>
+                </div>
+                <span class="text-muted">Texes, Us</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0 list-font">Allowed Holiday</h6>
+                </div>
+                <span class="text-muted">3 days</span>
+              </li>
+            </ul>
+            
+          </div>
+
+
         </div>
       </div>
-    
+
+
+    <div class="col-xl-8 order-xl-2 mb-5 mb-xl-0">
+    <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0"></h3>
+            </div>
+            <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+         
+
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+                
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Date Salary</th>
+                <th scope="col">Payment mode</th>
+                <th scope="col">salary month</th>
+                <th scope="col">Extra holidays</th>
+                <th scope="col">Paid amount</th>
+                <th scope="col">Adjusted Amount</th>
+                <th scope="col">Note</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                 <!-- User table -->
+           
+            <tr>
+                <td>
+                  SR
+                </td>
+                <td>
+                    user.name
+                </td>
+                <td>
+                  Date of salar
+                </td>
+                <td>
+                    Payment mode
+                </td>
+                <td>
+                    salary month
+                </td>
+                <td>
+                    Paid amount
+                    
+                </td>
+                <td>
+                  Adjusted amount   
+              </td>
+                <td>
+                  Note
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+       
+      </div>
     </div>
-    <div style="text-align: center; margin: 10px;">
-      
-          <a href="#!" class="btn btn-sm btn-primary btn">Pay Salary</a>
-        
-          <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/add-user']">Add User</a>
     </div>
-    
   </div>
   

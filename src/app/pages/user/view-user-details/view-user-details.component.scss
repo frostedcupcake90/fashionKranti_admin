@@ -1,0 +1,25 @@
+@media (min-width: 1200px) {
+
+    .order-xl-1 {
+        order: 2;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .pt-md-4, .py-md-4 {
+        padding-top: 9rem !important;
+    }
+}
+.list-group-item {
+    border: 0;
+}
+
+.list-font {
+    font-size: 0.8rem;
+}
+.text-muted {
+    color: #8898aa !important;
+    font-size: 0.8rem;
+}
+ 
