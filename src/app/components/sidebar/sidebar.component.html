@@ -91,7 +91,8 @@
       <ul class="navbar-nav">
           <li *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
               <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
-                  <i class="ni {{menuItem.icon}}"></i>
+                  <!-- <i class="ni {{menuItem.icon}}"></i> -->
+                  <img class="menuImg" [src]="menuItem.icon"/>
                   {{menuItem.title}}
               </a>
           </li>

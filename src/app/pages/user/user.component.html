@@ -4,69 +4,83 @@
   <!-- Header container -->
  
 </div>
+
+<div class="spinner"  *ngIf="loading">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
 <div class="container-fluid mt--7">
-    
-<div class="row">
+
+
+<div class="row" *ngIf="!loading">
   <div class="col">
     <div class="card shadow">
         <div class="card-header border-0">
           <div class="row align-items-center">
             <div class="col">
+            
               <h3 class="mb-0"></h3>
             </div>
-            <div class="col text-right">
-              <a href="#!" class="btn btn-sm btn-primary">See all</a>
-            </div>
+            <form class="navbar-search navbar-search form-inline mr-3 d-none d-md-flex ml-lg-auto">
+              <div class="form-group mb-0" [ngClass]="{ 'focused': focus === true }">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Search" [(ngModel)]="searchText"  type="text" (focus)="focus = true"
+                  (blur)="focus = false">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 
         <div class="table-responsive">
-         
 
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
                 
               <tr>
                 <th scope="col"></th>
-                <th scope="col">User Name</th>
-                <th scope="col">User Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Role</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Address</th>
+                <th scope="col">Rights</th>
+                <th scope="col">Details</th>
               </tr>
             </thead>
             <tbody>
                  <!-- User table -->
-           
-            <tr *ngFor="let user of userList" >
+          
+            <tr *ngFor="let user of userList | filter:searchText" >
                 <th scope="row">
-                    <i class="fas fa-search"></i>
+                    <i class="fa fa-edit"></i>
                 </th>
                 <th scope="row">
-                    {{user.name}}
+                    {{user.user_name}}
                 </th>
                 <td>
-                  {{user.userName}}
+                  {{user.user_email}}
                 </td>
                 <td>
-                    {{user.email}}
+                    {{user.user_mobile}}
                 </td>
                 <td>
-                    {{user.role}}
+                    {{user.user_address}}
                 </td>
                 <td>
-                    <div class="col text-right">
+                    <div>
                         <a href="#!" class="btn btn-sm btn-primary">Edit Right</a>
                       </div>
                     
                 </td>
                 <td>
-                    <div class="col text-right">
-                      <!-- <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/register']">
-                        <i class="ni ni-circle-08"></i>
-                        <span class="nav-link-inner--text">Register</span>
-                      </a> -->
+                    <div>
+                    
 
                         <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/view-user-details']">View Details</a>
                       </div>
@@ -82,11 +96,14 @@
     </div>
   
   </div>
-  <div style="text-align: center; margin: 10px;">
+  <div style="text-align: center; margin: 20px;" *ngIf="!loading">
     
-        <a href="#!" class="btn btn-sm btn-primary btn">Pay Salary</a>
+        <a href="#!" class="btn btn-sm btn-primary btn" style="margin-right: 10px;">Pay Salary</a>
       
-        <a href="#!" class="btn btn-sm btn-primary" routerLinkActive="active" [routerLink]="['/add-user']">Add User</a>
+        <a href="#!" class="btn btn-sm btn-primary" style="margin-left: 10px;" routerLinkActive="active" [routerLink]="['/add-user']">Add User</a>
+        <a href="#!" class="btn btn-sm btn-primary" style="margin-left: 10px;" routerLinkActive="active" [routerLink]="['/add-vendor']">Add Vendor</a>
   </div>
   
 </div>
+
+  

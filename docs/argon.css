@@ -21867,3 +21867,11 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 
     height: 3px;
 }
+/*custom css*/
+button.btn.dropdown-toggle.form-control {
+    color: #8898aa;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #cad1d7;
+    border-radius: 0.375rem;
+}

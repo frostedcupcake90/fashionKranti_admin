@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -15,6 +15,20 @@ import { ComponentsModule } from './components/components.module';
 import { UserComponent } from './pages/user/user.component';
 import { AddUserComponent } from './pages/user/add-user/add-user.component';
 import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-user-details.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { ProductComponent } from './pages/product/product.component';
+import { AddProductComponent } from './pages/product/add-product/add-product.component';
+import { AddCategoryComponent } from './pages/product/add-category/add-category.component';
+import { AddBrandComponent } from './pages/product/add-brand/add-brand.component';
+import { CategoryListComponent } from './pages/product/category-list/category-list.component';
+import { AddCategoryThreeComponent } from './pages/product/add-category-three/add-category-three.component';
+import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-category-two.component';
+import { VendorComponent } from './pages/vendor/vendor.component';
+import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
+import { ViewVendorDetailComponent } from './pages/vendor/view-vendor-detail/view-vendor-detail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -25,7 +39,9 @@ import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-us
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    Ng2SearchPipeModule,
   ],
   declarations: [
     AppComponent,
@@ -33,9 +49,24 @@ import { ViewUserDetailsComponent } from './pages/user/view-user-details/view-us
     AuthLayoutComponent,
     UserComponent,
     AddUserComponent,
-    ViewUserDetailsComponent
+    ViewUserDetailsComponent,
+    ProductComponent,
+    AddProductComponent,
+    AddCategoryComponent,
+    AddBrandComponent,
+    CategoryListComponent,
+    AddCategoryTwoComponent,
+    AddCategoryThreeComponent,
+    VendorComponent,
+    AddVendorComponent,
+    ViewVendorDetailComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far)
+  }
+}
