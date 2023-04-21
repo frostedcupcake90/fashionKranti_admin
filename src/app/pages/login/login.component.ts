@@ -23,10 +23,8 @@ password:String = '';
       password: this.password,
     }
      this.restApi.login(params).subscribe((data: {}) => {
-      debugger
-      //this.router.navigate(['/employees-list']);
      if(data["Status"] == "00"){
-            this.router.navigate(['/add-category']);
+            this.router.navigate(['/dashboard']);
      }
     });
 

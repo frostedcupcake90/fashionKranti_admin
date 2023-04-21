@@ -1,0 +1,7 @@
+{
+  "/fashionkranti/*": {
+      "target": "http://www.fashionkranti.in",
+      "secure": false,
+      "changeOrigin":true
+  }
+}

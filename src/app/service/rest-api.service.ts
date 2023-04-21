@@ -9,15 +9,18 @@ import { catchError } from 'rxjs/operators';
 })
 
 export class RestApiService {
-  
-  // Define API
-  apiURL = ' http://www.fashionkranti.in/fashionkranti';
-  constructor(public http: HttpClient) {}
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-    }),
+    })
   };
+
+  // Define API
+  apiURL = 'http://www.fashionkranti.in/fashionkranti';
+  constructor(public http: HttpClient) {
+  }
+
   login(obj: any) {
     return this.http.post(this.apiURL + '/uservalidate/Login.php', obj).pipe(
         catchError(this.handleError) // then handle the error
@@ -25,8 +28,10 @@ export class RestApiService {
   }
 
 
+
+
   fetchUserList() {
-    return this.http.post(this.apiURL + '/dev/fetchuserlist.php',{}).pipe(
+    return this.http.post(this.apiURL + '/dev/fetchuserlist.php',{},this.httpOptions).pipe(
         catchError(this.handleError) // then handle the error
       );
   }
@@ -35,7 +40,7 @@ export class RestApiService {
     let obj = {
       'user_email' : 'saurabh1@gmail.com'
     }
-    return this.http.post(this.apiURL + '/dev/fetchuserdetail.php', obj).pipe(
+    return this.http.post(this.apiURL + '/dev/fetchuserdetail.php', obj,this.httpOptions).pipe(
         catchError(this.handleError) // then handle the error
       );
   }
@@ -48,6 +53,7 @@ export class RestApiService {
       );
   }
  
+  
   // Error handling
   handleError(error: any) {
     let errorMessage = '';
@@ -58,7 +64,7 @@ export class RestApiService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    window.alert(errorMessage);
+ //   window.alert(errorMessage);
     return throwError(() => {
       return errorMessage;
     });

@@ -28,6 +28,7 @@ import { AddCategoryTwoComponent } from './pages/product/add-category-two/add-ca
 import { VendorComponent } from './pages/vendor/vendor.component';
 import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
 import { ViewVendorDetailComponent } from './pages/vendor/view-vendor-detail/view-vendor-detail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { ViewVendorDetailComponent } from './pages/vendor/view-vendor-detail/vie
     RouterModule,
     AppRoutingModule,
     FontAwesomeModule,
+    Ng2SearchPipeModule,
   ],
   declarations: [
     AppComponent,
