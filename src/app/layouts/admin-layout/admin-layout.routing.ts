@@ -16,6 +16,7 @@ import { AddCategoryTwoComponent } from 'src/app/pages/product/add-category-two/
 import { AddCategoryThreeComponent } from 'src/app/pages/product/add-category-three/add-category-three.component';
 import { VendorComponent } from 'src/app/pages/vendor/vendor.component';
 import { AddVendorComponent } from 'src/app/pages/vendor/add-vendor/add-vendor.component';
+import { ViewVendorDetailComponent } from 'src/app/pages/vendor/view-vendor-detail/view-vendor-detail.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -34,5 +35,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'add-category-three', component: AddCategoryThreeComponent },
     { path: 'add-vendor', component: AddVendorComponent },
     { path: 'vendor', component: VendorComponent },
+    { path: 'view-vendor-detail', component: ViewVendorDetailComponent },
+
 
 ];
