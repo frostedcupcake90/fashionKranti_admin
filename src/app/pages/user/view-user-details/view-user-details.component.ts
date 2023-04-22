@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { RestApiService } from 'src/app/service/rest-api.service';
 
 @Component({
@@ -7,28 +8,21 @@ import { RestApiService } from 'src/app/service/rest-api.service';
   styleUrls: ['./view-user-details.component.scss']
 })
 export class ViewUserDetailsComponent implements OnInit {
-  public userList = [
-    { name: 'Dr. Nice', userName: 'nice' ,email:'nice@gmail.com' ,role:'Admin'},
-    { name: 'Bombasto', userName: 'bombasto' ,email:'bombasto@gmail.com' ,role:'Admin'},
-    { name: 'Celeritas', userName: 'celeritas' ,email:'celeritas@gmail.com' ,role:'Admin'},
-    { name: 'Magneta', userName: 'nice' ,email:'mageta@gmail.com' ,role:'Admin'},
-    { name: 'RubberMan', userName: 'nice' ,email:'rubberman@gmail.com' ,role:'Admin'},
-    { name: 'Dynama', userName: 'nice' ,email:'dynama@gmail.com' ,role:'Admin'},
-    { name: 'Dr. IQ', userName: 'iq' ,email:'iq@gmail.com' ,role:'Admin'},
-    { name: 'Dr. Tornado', userName: 'tornado' ,email:'tornado@gmail.com' ,role:'Admin'},
- 
-  ];
   userDetails:  any;
-  constructor(private restApi: RestApiService) { }
-
-  ngOnInit(): void {
-
+  userEmail:any;
+  constructor(private restApi: RestApiService, private route: ActivatedRoute) { 
+    this.userEmail =   this.route.snapshot.paramMap.get('email')
+    console.log(this.userEmail)
     setTimeout(() => {
-      this.restApi.fetchUserDetails().subscribe((data) => {
+      this.restApi.fetchUserDetails(this.userEmail).subscribe((data) => {
         console.log('fetchuserDetails -- ',data)
         this.userDetails=data['userDetails'][0]
       });
-    }, 1000);
+    }, 300);
+  }
+
+  ngOnInit(): void {
+
   }
 
 }

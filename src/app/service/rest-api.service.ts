@@ -37,9 +37,9 @@ export class RestApiService {
       );
   }
 
-  fetchUserDetails() {
+  fetchUserDetails(email) {
     let obj = {
-      'user_email' : 'saurabh1@gmail.com'
+      'user_email' : email
     }
     let sessionId = localStorage.getItem('sessionId')
     return this.http.post(this.apiURL + '/user/fetchuserdetail.php?sessionId='+sessionId, obj,this.httpOptions).pipe(

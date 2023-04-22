@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestApiService } from 'src/app/service/rest-api.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class UserComponent implements OnInit {
   public focus;
   loading = true;
   searchText = ''
-  constructor(public restApi:RestApiService) { 
+  constructor(public restApi:RestApiService, private router:Router) { 
     
   }
 
@@ -32,17 +33,9 @@ this.userList = data['userDetails'];
   }
   
 
-  viewDetails(): void{
-    
+  viewDetails(user): void{
+    this.router.navigate(["/view-user-details", {email : user.user_email}]);
   }
 
-  // searchFunc(event){
-  //   alert(event.target.value)
-  //   this.userList.filter((x, i) => {
-  //     if (event.target.value === x.user_name) {
-  //       this.userList.push(x)
-  //       console.log(this.userList)
-  //     }
-  //   })
-  // }
+
 }
