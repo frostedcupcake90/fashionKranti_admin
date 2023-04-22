@@ -43,7 +43,7 @@ export class AddUserComponent implements OnInit {
       console.log('params -- ',params)
       this.restApi.addUser(params).subscribe((data) => {
         console.log('fetchuserlist -- ',data)
-       if(data["Status"] == "00"){
+       if(data["Status"] == "200"){
         this.router.navigate(['/user']);
 
        }
