@@ -1,126 +1,167 @@
-<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-size: cover; background-position: center top;">
-    <!-- Mask -->
-    <span class="mask bg-gradient-danger opacity-8"></span>
-    <!-- Header container -->
-   
-  </div>
-  <div class="container-fluid mt--7">
-  
-     
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+  style="background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-8"></span>
+  <!-- Header container -->
+
+</div>
+<div class="container-fluid mt--7">
+
+
   <div class="row justify-content-center">
     <div class="col-lg-5 col-md-7">
       <div class="card bg-secondary shadow border-0">
         <div class="card-body px-lg-5 py-lg-5">
 
           <form role="form">
-            <div class="form-group">
-              <div class="input-group input-group-alternative mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">           
-                         <fa-icon icon="money-bill"></fa-icon>
-                  </span>
-                </div>
+            <div style="width: 100%;">
+              <div style="width: 50%; padding: 10px; float:left" class="form-group">
+             
                 <div class="form-group text-center">
-                  <img src="assets/img/images/upload-background.jpg" *ngIf="!imageData" class="uploadBack">
-                  <img src="{{imageData}}" *ngIf="imageData" class="uploadBack">
-                 
-              </div>
-                <input class="form-control" type="file" (change)="uploadFile($event,'photo')" accept="image/*">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">           
-                         <fa-icon icon="money-bill"></fa-icon>
-                  </span>
+                  <label for="input-file-profile">
+                  <img src="assets/img/images/upload-background.jpg" style="width: 150px; height: 150px;" *ngIf="!imageData" class="uploadBack">
+                  
+                  <img src="{{imageData}}" style="width: 150px; height: 150px;" *ngIf="imageData" class="uploadBack">               
+                </label>
                 </div>
-                <input class="form-control" placeholder="Salary" type="number">
+              
+              <div class="form-group">
+                <input class="ng-hide" id="input-file-profile" image type="file"  style="display: none;" [(ngModel)]="imageData"  (change)="onFileSelected($event)" accept="image/*">
               </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="calendar-alt"></fa-icon>
-                  </span>
-                </div>
-                
-                <input class="form-control" placeholder="Joining Date" type="date">
+              <label style="text-align: center; display: block;">  
+              Profile Photo  
+                </label>    
               </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="mobile-alt"></fa-icon>  
-                  </span>
-                </div>
-                <input class="form-control" placeholder="Mobile Number" type="tel" maxlength="10"         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                >
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="envelope"></fa-icon>
-                  </span>
-                </div>
-                <input class="form-control" placeholder="Email Id" type="email">
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <div class="input-group input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="address-card"></fa-icon>
-                  </span>
-                </div>
-                <input class="form-control" placeholder="Address" type="text">
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <div class="input-group input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="calendar-alt"></fa-icon>
-                  </span>
-                </div>
-                <input class="form-control" placeholder="Allowed holidays" type="date">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <fa-icon icon="sticky-note"></fa-icon>
-                  </span>
-                </div>
-                
-<textarea class="form-control" rows="5" cols="33" placeholder="Notes"></textarea> 
+              <div style="width: 50%; float:right; padding: 10px;" class="form-group">
+               
+                <div class="form-group text-center">
+                  <label for="input-file-adhar">
 
+                  <img src="assets/img/images/upload-background.jpg" style="width: 150px; height: 150px;" *ngIf="!imageDataAdharCard" class="uploadBack">
 
+                  <img src="{{imageDataAdharCard}}" style="width: 150px; height: 150px;" *ngIf="imageDataAdharCard" class="uploadBack">               
+                </label>
+
+                </div>
+              
+              <div class="form-group">
+                
+                <input class="ng-hide" id="input-file-adhar" image type="file" style="display: none;" [(ngModel)]="imageDataAdharCard"  (change)="onFileSelectedAdharCard($event)" accept="image/*">
               </div>
+              <label style="text-align: center; display: block;">  
+                Adhar card photo
+                  </label>   
+              </div>
+              
             </div>
-          
-            <div style="text-align: center; margin: 10px;">
-      
-              <a href="#!" class="btn btn-sm btn-primary btn">Cancel</a>
             
-              <a href="#!" class="btn btn-sm btn-primary" (click)="addUser()" >Save</a>
-        </div>
-        
+          
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="user"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Name" type="text" [(ngModel)]="name">
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="money-bill"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Salary" type="number" [(ngModel)]="salary">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="calendar-alt"></fa-icon>
+                    </span>
+                  </div>
+
+                  <input class="form-control" placeholder="Joining Date" [(ngModel)]="joining_date" type="date">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="mobile-alt"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Mobile Number" type="tel" maxlength="10"
+                    [(ngModel)]="mobile_number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="envelope"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Email Id" type="email" [(ngModel)]="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="address-card"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Address" type="text" [(ngModel)]="address">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="calendar-alt"></fa-icon>
+                    </span>
+                  </div>
+                  <input class="form-control" placeholder="Allowed holidays" type="number"
+                    [(ngModel)]="allowed_holiday">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <fa-icon icon="sticky-note"></fa-icon>
+                    </span>
+                  </div>
+
+                  <textarea class="form-control" rows="5" cols="33" placeholder="Notes" [(ngModel)]="notes"></textarea> 
+
+
+                </div>
+              </div>
+
+              <div style="text-align: center; margin: 10px;">
+
+                <a href="#!" class="btn btn-sm btn-primary btn">Cancel</a>
+
+                <a href="#!" class="btn btn-sm btn-primary" (click)="addUser()">Save</a>
+              </div>
+
           </form>
         </div>
-        
-         
-        </div>
+
+
       </div>
-    
     </div>
-    
+
   </div>
-  
+
+</div>
