@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestApiService } from 'src/app/service/rest-api.service';
 
 @Component({
   selector: 'app-view-user-details',
@@ -17,9 +18,17 @@ export class ViewUserDetailsComponent implements OnInit {
     { name: 'Dr. Tornado', userName: 'tornado' ,email:'tornado@gmail.com' ,role:'Admin'},
  
   ];
-  constructor() { }
+  userDetails:  any;
+  constructor(private restApi: RestApiService) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.restApi.fetchUserDetails().subscribe((data) => {
+        console.log('fetchuserDetails -- ',data)
+        this.userDetails=data['userDetails'][0]
+      });
+    }, 1000);
   }
 
 }
