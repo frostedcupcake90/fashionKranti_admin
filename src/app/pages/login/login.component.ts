@@ -24,7 +24,8 @@ password:String = '';
     }
      this.restApi.login(params).subscribe((data: {}) => {
      if(data["Status"] == "00"){
-            this.router.navigate(['/dashboard']);
+      localStorage.setItem('sessionId',data["sessionid"]);
+      this.router.navigate(['/dashboard']);
      }
     });
 
