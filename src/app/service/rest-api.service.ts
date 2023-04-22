@@ -17,7 +17,7 @@ export class RestApiService {
   };
 
   // Define API
-  apiURL = 'http://www.fashionkranti.in/fashionkranti';
+  apiURL = 'http://www.fashionkranti.in/fashionkranti/dev';
   constructor(public http: HttpClient) {
   }
 
@@ -31,16 +31,18 @@ export class RestApiService {
 
 
   fetchUserList() {
-    return this.http.post(this.apiURL + '/dev/fetchuserlist.php',{},this.httpOptions).pipe(
+    let sessionId = localStorage.getItem('sessionId')
+    return this.http.post(this.apiURL + '/user/fetchuserlist.php?sessionId='+sessionId,{},this.httpOptions).pipe(
         catchError(this.handleError) // then handle the error
       );
   }
 
-  fetchUserDetails() {
+  fetchUserDetails(email) {
     let obj = {
-      'user_email' : 'saurabh1@gmail.com'
+      'user_email' : email
     }
-    return this.http.post(this.apiURL + '/dev/fetchuserdetail.php', obj,this.httpOptions).pipe(
+    let sessionId = localStorage.getItem('sessionId')
+    return this.http.post(this.apiURL + '/user/fetchuserdetail.php?sessionId='+sessionId, obj,this.httpOptions).pipe(
         catchError(this.handleError) // then handle the error
       );
   }
@@ -48,7 +50,8 @@ export class RestApiService {
   
 
   addUser(obj: any) {
-    return this.http.post(this.apiURL + '/dev/adduser.php', obj).pipe(
+    let sessionId = localStorage.getItem('sessionId')
+    return this.http.post(this.apiURL + '/user/adduser.php?sessionId='+sessionId, obj).pipe(
         catchError(this.handleError) // then handle the error
       );
   }
@@ -64,7 +67,6 @@ export class RestApiService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
- //   window.alert(errorMessage);
     return throwError(() => {
       return errorMessage;
     });
