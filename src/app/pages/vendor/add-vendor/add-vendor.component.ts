@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class AddVendorComponent implements OnInit {
   heading = "ADD VENDOR"
   constructor() { }
-
+  fname : String = '';
+  personname : String = '';
+  gstin : String = '';
+  contactno : String ='';
+  email: String = '';
+  address:String = '';
   ngOnInit(): void {
+  }
+  cancel(){
+  }
+
+  addupdate(){
   }
 
 }

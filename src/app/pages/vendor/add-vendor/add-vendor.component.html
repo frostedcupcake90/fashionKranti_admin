@@ -26,7 +26,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-building"></i></span>
                     </div>
-                    <input class="form-control" placeholder="FIRM NAME" type="text">
+                    <input class="form-control" placeholder="FIRM NAME" type="text" [(ngModel)]="fname">
                   </div>
                 </div>
                 <div class="form-group">
@@ -34,7 +34,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                     </div>
-                    <input class="form-control" placeholder="PERSON NAME" type="text">
+                    <input class="form-control" placeholder="PERSON NAME" type="text" [(ngModel)]="personname">
                   </div>
                 </div>
                 <div class="form-group">
@@ -42,7 +42,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                     </div>
-                    <input class="form-control" placeholder="GSTIN" type="text">
+                    <input class="form-control" placeholder="GSTIN" type="text" [(ngModel)]="gstin">
                   </div>
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                     </div>
-                    <input class="form-control" placeholder="CONTACT NUMBER" type="text">
+                    <input class="form-control" placeholder="CONTACT NUMBER" type="text" [(ngModel)]="contactno">
                   </div>
                 </div>
                 <div class="form-group">
@@ -58,7 +58,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="EMAIL" type="email">
+                    <input class="form-control" placeholder="EMAIL" type="email" [(ngModel)]="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -66,19 +66,19 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
                     </div>
-                    <input class="form-control" placeholder="ADDRESS" type="text">
+                    <input class="form-control" placeholder="ADDRESS" type="text" [(ngModel)]="address">
                   </div>
                 </div>
               </form>
               <div class="row">
                 <div class="col-md-6">
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary btn-info mt-4">CANCEL</button>
+                    <button type="button" class="btn btn-primary btn-info mt-4" (click)="cancel()">CANCEL</button>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary mt-4">ADD/UPDATE</button>
+                    <button type="button" class="btn btn-primary mt-4" (click)="addupdate()">ADD/UPDATE</button>
                   </div>
                 </div>
               </div>
