@@ -17,6 +17,8 @@ import { AddCategoryThreeComponent } from 'src/app/pages/product/add-category-th
 import { VendorComponent } from 'src/app/pages/vendor/vendor.component';
 import { AddVendorComponent } from 'src/app/pages/vendor/add-vendor/add-vendor.component';
 import { ViewVendorDetailComponent } from 'src/app/pages/vendor/view-vendor-detail/view-vendor-detail.component';
+import { PurchaseMainComponent } from 'src/app/purchase/purchase-main/purchase-main.component';
+import { PurchaseBillListComponent } from 'src/app/purchase/purchase-bill-list/purchase-bill-list.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -36,6 +38,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'add-vendor', component: AddVendorComponent },
     { path: 'vendor', component: VendorComponent },
     { path: 'view-vendor-detail', component: ViewVendorDetailComponent },
+    { path: 'purchase-main', component: PurchaseMainComponent },
+    { path: 'purchase-bill-list', component: PurchaseBillListComponent },
+
+    
 
 
 ];

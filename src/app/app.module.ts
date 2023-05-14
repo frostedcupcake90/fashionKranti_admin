@@ -29,6 +29,8 @@ import { VendorComponent } from './pages/vendor/vendor.component';
 import { AddVendorComponent } from './pages/vendor/add-vendor/add-vendor.component';
 import { ViewVendorDetailComponent } from './pages/vendor/view-vendor-detail/view-vendor-detail.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PurchaseBillListComponent } from './purchase/purchase-bill-list/purchase-bill-list.component';
+import { PurchaseMainComponent } from './purchase/purchase-main/purchase-main.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AddCategoryThreeComponent,
     VendorComponent,
     AddVendorComponent,
-    ViewVendorDetailComponent
+    ViewVendorDetailComponent,
+    PurchaseBillListComponent,
+    PurchaseMainComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

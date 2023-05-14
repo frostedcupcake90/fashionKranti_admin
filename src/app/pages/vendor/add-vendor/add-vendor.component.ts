@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-add-vendor',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddVendorComponent implements OnInit {
   heading = "ADD VENDOR"
-  constructor() { }
+  constructor(private router: Router, private location: Location) { }
   fname : String = '';
   personname : String = '';
   gstin : String = '';
@@ -17,6 +19,7 @@ export class AddVendorComponent implements OnInit {
   ngOnInit(): void {
   }
   cancel(){
+    this.location.back()
   }
 
   addupdate(){

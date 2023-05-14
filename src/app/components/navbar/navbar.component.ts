@@ -33,4 +33,8 @@ export class NavbarComponent implements OnInit {
     return 'Dashboard';
   }
 
+  backNavigation(){
+    this.location.back()
+  }
+
 }
